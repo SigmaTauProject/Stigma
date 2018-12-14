@@ -21,7 +21,7 @@ class Ship {
 	void update() {
 		//---Get msgs
 		{
-			import galactic_msg_.up_;
+			import stigma_protocol_.up_;
 			foreach (unknownMsg; network.map!(msgData=>UnknownMsg(msgData))) {
 				final switch (unknownMsg.type) {
 					case MsgType.chVel:
@@ -53,7 +53,7 @@ class Ship {
 				    in the same order and at the beginning.  Thus, any entity in
 				    `world.entities` after our last entity is a new entity.
 			*/
-			import galactic_msg_.down_;
+			import stigma_protocol_.down_;
 			//---Update entities synced with cliend (update/remove)
 			foreach_reverse (i, entity; syncedEntities) {
 				if (!entity.getInWorld) {
